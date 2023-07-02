@@ -47,7 +47,7 @@ const deviceName = puppeteer.KnownDevices[opts.emulate];
   }
 
   async function execute() {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ headless: 'new' });
     const page = await browser.newPage();
 
     if (opts.no) {
